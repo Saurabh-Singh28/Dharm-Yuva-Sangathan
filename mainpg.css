@@ -272,6 +272,90 @@ button:active {
 }
 
 
+/* Global Reset & Overflow Fix */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Preformatted text block overflow fix */
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* Footer fixes */
+.footer-top,
+.footer-bottom,
+.footer-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Contact Button (if fixed somewhere) */
+.contact-button {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  background-color: #00faff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #00bccc;
+  transform: scale(1.05);
+}
+
+/* Project Buttons Styling */
+.project-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #00faff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.project-button:hover {
+  background-color: #00bccc;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.project-button:active {
+  background-color: #00e0e0;
+  transform: scale(0.97);
+}
+
 /* Mobile Specific */
 @media (max-width: 480px) {
   .navbar {
