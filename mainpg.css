@@ -366,6 +366,18 @@ pre {
 
 /* Mobile Specific */
 @media (max-width: 480px) {
+   body {
+    font-size: 1rem; /* Or try 1.1rem */
+  }
+
+  .intro-section pre,
+  .info-section pre {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
   .navbar {
     flex-direction: column;
     padding: 10px 8px;
@@ -491,3 +503,4 @@ pre {
     font-size: 14px;
   }
 }
+
