@@ -465,30 +465,57 @@ pre {
 }
 
 /* Project Buttons Styling */
-.project-button {
+ .project-button {
+  position: relative;
   display: inline-block;
-  padding: 12px 24px;
-  background-color: #00faff;
-  color: #000;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #00faff;
+  font-size: 1rem;
   font-weight: bold;
-  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 16px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.project-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 180deg at 50% 50%, #00faff, #00bccc, #00faff);
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 .project-button:hover {
-  background-color: #00bccc;
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  background-color: #00faff;
+  color: #000;
 }
 
 .project-button:active {
-  background-color: #00e0e0;
   transform: scale(0.97);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Mobile Specific */
@@ -1189,3 +1216,4 @@ ul li strong {
     font-size: 0.8rem;
   }
 }
+
