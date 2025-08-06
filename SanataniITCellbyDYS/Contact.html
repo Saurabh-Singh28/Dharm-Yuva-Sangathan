@@ -95,7 +95,7 @@
     <p class="subtext">Raise a concern, submit a report, or collaborate with Sanatani IT Cell by DYS. We're here to protect Dharma together.</p>
 
     <div class="contact-box">
-      <form action="https://formspree.io/f/xovlelbl" method="post" class="contact-form">
+      <form action="https://formspree.io/f/xrblywjb" method="post" class="contact-form">
         <input type="text" name="name" placeholder="Your Full Name" required>
         <input type="email" name="email" placeholder="Your Email Address" required>
         <input type="text" name="subject" placeholder="Subject" required>
@@ -114,9 +114,43 @@
   <footer>
     &copy; 2025 Sanatani IT Cell by DYS • United for Dharma • All Rights Reserved
   </footer>
+<script>handleContactForm(form) {
+    const formData = new FormData(form);
 
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    fetch("https://formspree.io/f/xrblywjb", {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success ke baad homepage pe redirect karo
+            window.location.href = "Contact.html";  // ya "/" depending on your folder structure
+        } else {
+            return response.json().then(data => {
+                throw new Error(data.error || 'Something went wrong');
+            });
+        }
+    })
+    .catch(error => {
+        this.showNotification(`Error: ${error.message}`, 'error');
+    })
+    .finally(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
+}
+</script>
 </body>
 </html>
+
 
 
 
