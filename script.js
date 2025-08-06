@@ -96,28 +96,39 @@ class DharmYuvaSangathan {
         }
     }
 
-    handleContactForm(form) {
-        const formData = new FormData(form);
-        const data = {};
-        
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
+   handleContactForm(form) {
+    const formData = new FormData(form);
 
-        // Show loading state
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
 
-        // Simulate form submission (replace with actual API call)
-        setTimeout(() => {
+    fetch("https://formspree.io/f/xpwlygkg", {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
             this.showNotification('Thank you for your message! We will contact you soon.', 'success');
             form.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
-    }
+        } else {
+            return response.json().then(data => {
+                throw new Error(data.error || 'Something went wrong');
+            });
+        }
+    })
+    .catch(error => {
+        this.showNotification(`Error: ${error.message}`, 'error');
+    })
+    .finally(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
+}
 
     showNotification(message, type = 'info') {
         // Create notification element
@@ -132,7 +143,6 @@ class DharmYuvaSangathan {
                 </button>
             </div>
         `;
-
         // Add styles if not already present
         if (!document.querySelector('#notification-styles')) {
             const styles = document.createElement('style');
@@ -186,7 +196,6 @@ class DharmYuvaSangathan {
             }
         }, 5000);
     }
-
     setupMobileNavigation() {
         // Add mobile navigation styles if not present
         if (!document.querySelector('#mobile-nav-styles')) {
@@ -244,7 +253,6 @@ class DharmYuvaSangathan {
             document.head.appendChild(styles);
         }
     }
-
     setupSmoothScrolling() {
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -378,7 +386,6 @@ class DharmYuvaSangathan {
             document.head.appendChild(styles);
         }
     }
-
     // Method to handle membership applications
     handleMembershipApplication(type) {
         const membershipData = {
