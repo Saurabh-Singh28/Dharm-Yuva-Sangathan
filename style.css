@@ -188,6 +188,35 @@ p {
     padding: 0 var(--spacing-lg);
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.brand-logo {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    transition: all var(--transition-normal);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .nav-brand .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -355,13 +384,13 @@ p {
 
 .card-preview:nth-child(1) {
     top: 20%;
-    left: 10%;
+    left: 5%;
     animation-delay: 0s;
 }
 
 .card-preview:nth-child(2) {
     top: 50%;
-    right: 20%;
+    right: 70%;
     animation-delay: 2s;
 }
 
@@ -1235,6 +1264,18 @@ a:focus {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--spacing-lg);
+}
+
+.activity-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all var(--transition-normal);
+}
+
+.activity-link:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .activity-card {
