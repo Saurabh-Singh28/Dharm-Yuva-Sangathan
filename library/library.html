@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharmic Library - Dharm Yuva Sangathan</title>
+    <meta name="description" content="Access our comprehensive collection of dharmic texts, research papers, and educational resources at Dharm Yuva Sangathan's digital library.">
+    <meta name="keywords" content="dharmic library, digital library, dharmic texts, research papers, Sanatan Dharma, educational resources">
+    <meta name="author" content="Dharm Yuva Sangathan">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dharmic Library - Dharm Yuva Sangathan">
+    <meta property="og:description" content="Access our comprehensive collection of dharmic texts and educational resources">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    
+    <!-- CSS and Fonts -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="library.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon --> 
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iI2ZmNmIzNSIvPgo8cGF0aCBkPSJNOCAxMkgxNlYyMEg4VjEyWiIgZmlsbD0id2hpdGUiLz4KPHA+dGggZD0iTTIwIDhIMjhWMTZIMjBWOFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMCAyMEgyOFYyOEgyMFYyMFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="library.html" class="nav-brand">
+                    <div class="brand-dp">
+                        <img src="LIBRARY.png" alt="Profile" class="dp-img" onerror="this.src='https://via.placeholder.com/40x40/ff6b35/ffffff?text=DYS'">
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="logo">Dharm Yuva Sangathan</h1>
+                        <p class="tagline">धर्मो रक्षति रक्षित: | Dharma Protects Those Who Protect It</p>
+                    </div>
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="https://dharm-yuva-sangathan.netlify.app/" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#activities" class="nav-link">Activities</a>
+                    <a href="library.html" class="nav-link active">Library</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Library Hero Section -->
+    <section class="library-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <i class="fas fa-book-open"></i>
+                    Dharmic Digital Library
+                </h1>
+                <p class="hero-subtitle">
+                    "यत्र नार्यस्तु पूज्यन्ते रमन्ते तत्र देवता:" - Access our comprehensive collection of dharmic texts, research papers, and educational resources
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalFiles">50+</span>
+                        <span class="stat-label">Documents</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Search and Filters -->
+    <section class="library-controls">
+        <div class="container">
+            <div class="controls-wrapper">
+                <div class="search-section">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search by title, author, or keywords...">
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="history">History & Culture</option>
+                        <option value="philosophy">Philosophy</option>
+                        <option value="research">Research Papers</option>
+                        <option value="texts">Sacred Texts</option>
+                        <option value="reports">Reports</option>
+                    </select>
+                    <button class="view-toggle" id="viewToggle" title="Toggle view">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Content -->
+    <section class="library-content">
+        <div class="container">
+            <!-- Quote Section -->
+            <div class="dharmic-quote">
+                <blockquote id="randomQuote">
+                    "हम सनातनी हैं — हमारी जड़ें वेदों में हैं, और हमारी दृष्टि भविष्य में। हम न तो केवल दर्शक हैं, न ही मौन साधक — हम डिजिटल धर्मयुद्ध के योद्धा हैं।"
+                </blockquote>
+            </div>
+
+            <!-- Files Table View -->
+            <div class="files-container" id="filesContainer">
+                <div class="table-wrapper">
+                    <table id="fileTable" class="files-table">
+                        <thead>
+                            <tr>
+                                <th><i class="fas fa-file-alt"></i> Title</th>
+                                <th><i class="fas fa-tags"></i> Category</th>
+                                <th><i class="fas fa-user"></i> Author</th>
+                                <th><i class="fas fa-calendar"></i> Date</th>
+                                <th><i class="fas fa-download"></i> Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fileTableBody">
+                            <!-- Files will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Grid View (Initially Hidden) -->
+                <div class="files-grid" id="filesGrid" style="display: none;">
+                    <!-- Files will be populated by JavaScript -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-wrapper">
+                    <div class="pagination-info">
+                        <span id="paginationInfo">Showing 1-10 of 50 files</span>
+                    </div>
+                    <div class="pagination-controls" id="paginationControls">
+                        <button class="pagination-btn" id="prevBtn" onclick="prevPage()">
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <div class="pagination-numbers" id="paginationNumbers">
+                            <!-- Page numbers will be generated by JavaScript -->
+                        </div>
+                        <button class="pagination-btn" id="nextBtn" onclick="nextPage()">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Progress Modal -->
+    <div class="modal" id="downloadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-download"></i> Downloading File</h3>
+                <button class="modal-close" onclick="hideProgressBar()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressText">Preparing download...</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Library Support</h3>
+                    <p>Need help accessing our digital library, looking for specific resources, or want to contribute documents? Our library team is here to assist you!</p>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <div>
+                            <h4><a href="https://discord.gg/QGEXg2ZU">Channel</a></h4>
+                            <p>Team DYS</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4><a href="mailto:sanataniking280@gmail.com">Email</a></h4>
+                            <p>sanataniking280@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <h4><a href="https://t.me/Sanatan1Rakshak">Telegram</a></h4>
+                            <p>@Sanatan1Rakshak</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="https://t.me/Sanatan1Rakshak" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://x.com/DYSsangathan" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/dharm_yuva_sangathan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discord.gg/QGEXg2ZU" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                  
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Library Inquiry Form</h3>
+                    <form id="libraryContactForm" action="https://formspree.io/f/xpwlygkg" method="POST">
+
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="organization" name="organization" placeholder="Organization/Institution (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="">Select Inquiry Type</option>
+                                <option value="resource-request">📚 Request Specific Resource</option>
+                                <option value="access-help">🔑 Library Access Help</option>
+                                <option value="document-submission">📄 Submit Document/Research</option>
+                                <option value="research-assistance">🔍 Research Assistance</option>
+                                <option value="technical-support">⚙️ Technical Support</option>
+                                <option value="feedback">💬 Feedback & Suggestions</option>
+                                <option value="collaboration">🤝 Collaboration Proposal</option>
+                                <option value="other">❓ Other Library Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject/Topic of Interest" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Please describe your inquiry in detail. If requesting a specific resource, include title, author, or keywords..." rows="6" required></textarea>
+                        </div>
+                        <div class="form-group">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Submit Library Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dharm Yuva Sangathan</h3>
+                    <p>Empowering youth through dharmic values and cultural preservation. Building a stronger, value-based society for future generations.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="i#about">About Us</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Library Resources</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterByCategory('history')">Historical Documents</a></li>
+                        <li><a href="#" onclick="filterByCategory('philosophy')">Philosophical Texts</a></li>
+                        <li><a href="#" onclick="filterByCategory('research')">Research Papers</a></li>
+                        <li><a href="#" onclick="filterByCategory('texts')">Sacred Texts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@dharmyuvasangathan.org</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dharm Yuva Sangathan. All rights reserved. | धर्मो रक्षति रक्षित:</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="library.js"></script>
+</body>
+</html>
