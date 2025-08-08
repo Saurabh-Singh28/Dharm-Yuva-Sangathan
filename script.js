@@ -16,6 +16,16 @@ class DharmYuvaSangathan {
     }
 
     setupEventListeners() {
+        // Nav-brand refresh functionality
+        const navBrand = document.querySelector('.nav-brand');
+        if (navBrand) {
+            navBrand.addEventListener('click', () => {
+                window.location.reload();
+            });
+            // Add cursor pointer style for better UX
+            navBrand.style.cursor = 'pointer';
+        }
+
         // Navigation toggle
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
