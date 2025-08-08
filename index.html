@@ -16,7 +16,7 @@
     <meta property="og:image" content="">
     
     <!-- CSS and Fonts -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -29,8 +29,13 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-brand">
-                    <h1 class="logo">Dharm Yuva Sangathan</h1>
-                    <p class="tagline">धर्मो रक्षति रक्षित: | Dharma Protects Those Who Protect It</p>
+                    <div class="brand-logo">
+                        <img src="DharmYuvaSangathan_Logo_DesignedBySaurabhSingh_24072025.png.png" alt="DYS Logo" class="logo-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="brand-text">
+                        <h1 class="logo">Dharm Yuva Sangathan</h1>
+                        <p class="tagline">धर्मो रक्षति रक्षित: | Dharma Protects Those Who Protect It</p>
+                    </div>
                 </div>
                 <div class="nav-menu" id="nav-menu">
                     <a href="#home" class="nav-link">Home</a>
@@ -157,27 +162,31 @@
         <div class="container">
             <h2 class="section-title">Our Activities & Initiatives</h2>
             <div class="activities-grid">
-             <a href="SanataniITCellbyDYS/index.html" target="_blank">   <div class="activity-card">
-                    <div class="card-icon">
-                        <i class="fas fa-leaf"></i>
+                <a href="IT Cell/sanatani-it-cell.html" class="activity-link">
+                    <div class="activity-card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Sanatani IT Cell by DYS</h3>
+                        <p>A digital initiative that raises its voice against misinformation and defamatory content targeting Hinduism. We report anti-Hindu pages to protect truth and preserve our culture.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-flag"></i> 1,000+ Reports Filed</span>
+                        </div>
                     </div>
-                    <h3>Sanatani IT cell by DYS</h3>
-                    <p>Sanatani IT Cell by DYS-A digital initiative that raises its voice against misinformation and defamatory content targeting Hinduism. We report anti-Hindu pages to protect truth and preserve our culture.</p>
-                    <div class="card-stats">
-                        <span><i class="fas fa-shield-alt"></i> 1,000+ Reports Filed</span>
-                    </div>
-                </div></a>
+                </a>
 
-                <a href="library/library.html" target="_blank"><div class="activity-card">
-                    <div class="card-icon">
-                        <i class="fas fa-hands-helping"></i>
+                <a href="library/index.html" target="_blank" class="activity-link">
+                    <div class="activity-card">
+                        <div class="card-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>DYS Library</h3>
+                        <p>A digital archive dedicated to exposing anti-Hindu and anti-social agendas. We document, analyze, and reveal the truth behind propaganda that threatens our culture and unity.</p>
+                        <div class="card-stats">
+                            <span><i class="fas fa-archive"></i> 500+ Resources</span>
+                        </div>
                     </div>
-                    <h3>DYS Library</h3>
-                    <p>DYS Library-A digital archive dedicated to exposing anti-Hindu and anti-social agendas. We document, analyze, and reveal the truth behind propaganda that threatens our culture and unity.</p>
-                    <div class="card-stats">
-                        <span><i class="fas fa-book"></i> 500+ Resources</span>
-                    </div>
-                </div></a>
+                </a>
 
                 <div class="activity-card">
                     <div class="card-icon">
@@ -189,7 +198,7 @@
                         <!-- <span><i class="fas fa-graduation-cap"></i> 5,000+ Students</span> -->
                     </div>
                 </div>
-
+<!-- 
                 <div class="activity-card">
                     <div class="card-icon">
                         <i class="fas fa-dumbbell"></i>
@@ -220,7 +229,7 @@
                     <p>Daily meditation sessions, yoga classes, spiritual discourses, and retreats for inner transformation and peace.</p>
                     <div class="card-stats">
                         <span><i class="fas fa-om"></i> Daily Sessions</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -278,6 +287,18 @@
         <div class="container">
             <h2 class="section-title">Voices of Transformation</h2>
             <div class="testimonials-grid">
+                 <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Joining Dharm Yuva Sangathan has been a life-changing experience. I discovered my true purpose and learned to balance modern life with dharmic values. The organization's guidance helped me become a better human being."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="photo_6134436157937794880_c.jpg" alt="Priya Sharma" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Dharm Yuva Sangathan (DYS)</h4>
+                            <p>Team DYS</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <p>"Joining Dharm Yuva Sangathan has been a life-changing experience. I discovered my true purpose and learned to balance modern life with dharmic values. The organization's guidance helped me become a better human being."</p>
@@ -285,8 +306,8 @@
                     <div class="testimonial-author">
                         <img src="photo_6134436157937794880_c.jpg" alt="Priya Sharma" class="author-avatar">
                         <div class="author-info">
-                            <h4>Priya Sharma</h4>
-                            <p>Software Engineer, Bangalore</p>
+                            <h4>Siddhi</h4>
+                            <p>Student , Maharashtra</p>
                         </div>
                     </div>
                 </div>
@@ -298,8 +319,8 @@
                     <div class="testimonial-author">
                         <img src="photo_6134436157937794880_c.jpg" alt="Arjun Patel" class="author-avatar">
                         <div class="author-info">
-                            <h4>Arjun Patel</h4>
-                            <p>Student Leader, Ahmedabad</p>
+                            <h4>Saurabh</h4>
+                            <p>Student Leader, Uttar Pradesh</p>
                         </div>
                     </div>
                 </div>
@@ -311,8 +332,32 @@
                     <div class="testimonial-author">
                         <img src="photo_6134436157937794880_c.jpg" alt="Meera Singh" class="author-avatar">
                         <div class="author-info">
-                            <h4>Meera Singh</h4>
-                            <p>Yoga Instructor, Rishikesh</p>
+                            <h4>Lokesh</h4>
+                            <p>Doctor , Madhya Pradesh</p>
+                        </div>
+                    </div>
+                </div>
+                                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The spiritual practices and meditation sessions transformed my life completely. I found inner peace and clarity of purpose. The organization is doing incredible work in empowering youth with timeless wisdom."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="photo_6134436157937794880_c.jpg" alt="Meera Singh" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Anurag</h4>
+                            <p>Youth Leader ,Bihar</p>
+                        </div>
+                    </div>
+                </div>
+                                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The spiritual practices and meditation sessions transformed my life completely. I found inner peace and clarity of purpose. The organization is doing incredible work in empowering youth with timeless wisdom."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="photo_6134436157937794880_c.jpg" alt="Meera Singh" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Ashish</h4>
+                            <p>C.A. , Uttrakhand</p>
                         </div>
                     </div>
                 </div>
@@ -328,18 +373,6 @@
                 <p>Be part of a movement that's shaping the future through dharmic values. Together, we can create a better world rooted in truth, compassion, and righteousness.</p>
                 
                 <div class="membership-options">
-                    <div class="membership-card">
-                        <h3>Student Member</h3>
-                        <p>For students and young professionals aged 16-30</p>
-                        <ul>
-                            <li>Access to all workshops and seminars</li>
-                            <li>Spiritual guidance and mentorship</li>
-                            <li>Participation in service activities</li>
-                            <li>Cultural and educational programs</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-primary">Join Now</a>
-                    </div>
-                    
                     <div class="membership-card featured">
                         <h3>Active Volunteer</h3>
                         <p>For dedicated individuals ready to lead initiatives</p>
@@ -380,7 +413,7 @@
                     <div class="contact-item">
                         <i class="fab fa-discord"></i>
                         <div>
-                            <h4><a href="https://discord.gg/QGEXg2ZU">Channel</a></h4>
+                            <h4><a href="https://discord.gg/QGEXg2ZU">Discord Channel</a></h4>
                             <p>Team DYS</p>
                         </div>
                     </div>
@@ -396,8 +429,8 @@
                     <div class="contact-item">
                         <i class="fab fa-telegram"></i>
                         <div>
-                            <h4><a href="https://t.me/Sanatan1Rakshak">Telegram</a></h4>
-                            <p>@Sanatan1Rakshak</p>
+                            <h4><a href="https://t.me/SanatanRakshak0">Telegram Group</a></h4>
+                            <p>@SanatanRakshak0</p>
                         </div>
                     </div>
                     
@@ -500,6 +533,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
