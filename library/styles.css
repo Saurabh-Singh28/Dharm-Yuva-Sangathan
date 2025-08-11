@@ -1007,19 +1007,9 @@ p {
     margin-bottom: var(--spacing-sm);
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation: consolidate behavior to slide-in panel from right */
 .nav-menu.active {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--bg-tertiary);
-    box-shadow: var(--shadow-lg);
-    padding: var(--spacing-lg);
-    gap: var(--spacing-md);
 }
 
 .nav-toggle.active .bar:nth-child(1) {
@@ -1046,7 +1036,7 @@ p {
     }
     
     .nav-menu {
-        display: none;
+        display: none; /* hidden by default; activated by .active from script.js */
     }
     
     .nav-toggle {
